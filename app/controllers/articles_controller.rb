@@ -34,7 +34,7 @@ class ArticlesController < ApplicationController
 
   def destroy
     @article.destroy
-    redirect_to articles_path, notice: 'Article deleted.'
+    redirect_to articles_path, status: :see_other
   end
 
   private

@@ -1,5 +1,12 @@
-<h1>Add new article</h1>
+<div class="container">
+  <h1 style="text-align: center; color: #333; font-family: 'Roboto Slab', serif; font-size: 3em;"><strong>New article</strong></h1>
 
-<%= render 'form', article: @article %>
+  <!-- Include Google Fonts link for Roboto Slab -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;700&display=swap" rel="stylesheet">
 
-<%= link_to 'Back to the list', articles_path %>
+  <%= render 'form', article: @article %>
+
+  <div style="text-align: center;">
+    <%= link_to 'Back to the list', articles_path, class: 'btn btn-success' %>
+  </div>
+</div>

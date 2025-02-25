@@ -1,6 +1,13 @@
-<h1><%= @article.title %></h1>
-<p><%= @article.content %></p>
+<!-- Include Google Fonts link for Roboto Slab -->
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;700&display=swap" rel="stylesheet">
 
-<%= link_to 'Back to the list', articles_path %> |
-<%= link_to 'Edit', edit_article_path(@article) %> |
-<%= link_to 'Delete', @article, method: :delete, data: { confirm: 'Are you sure?' } %>
+<div class="container">
+  <h1 style="text-align: center; color: #333; font-family: 'Roboto Slab', serif; font-size: 3em;"><%= @article.title %></h1>
+  <p style="font-size: 1.5em; font-family: 'Roboto Slab', serif;"><%= @article.content %></p>
+
+  <div style="text-align: center; margin-bottom: 20px;">
+    <%= link_to 'Back to the list', articles_path, class: 'btn btn-success', style: 'margin-right: 10px;' %>
+    <%= link_to 'Edit', edit_article_path(@article), class: 'btn btn-secondary', style: 'margin-right: 10px;' %>
+    <%= link_to 'Delete', @article, data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}, class: 'btn btn-danger' %>
+  </div>
+</div>
